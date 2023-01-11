@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/8865/8865527.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="header flex_center">
+        <label for="toggle_menu" class="toogle-icons flex_jus_center">
+            <i class="bi bi-list"></i>
+        </label>
+        <div class="back_next">
+            <a href=""><i class="bi bi-arrow-left"></i></a>
+            <a href=""><i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="search_box_content">
+            <input type="search" placeholder="Tìm kiếm gì đi...">
+            <i class="bi bi-search"></i>
+        </div>
+        <div class="notification_tooL flex_center">
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-envelope"></i>
+        </div>
+        
+        <div class="profile_sign">
+            <a class="profile_admin flex_center">
+                <img src="https://i.pinimg.com/564x/7b/1d/a3/7b1da3317239a473e43108a373010713.jpg" alt="">
+                <span>Nhat Vi</span>
+            </a>
+        </div>
+    </div>
+    <input type="checkbox" hidden name="" id="toggle_menu">
+    <div class="admin__flix flex_center">
+        <div class="navigation">
+            <a href="" class="logo_n flex_jus_center">
+                Viflix
+            </a>
+            <div class="navigation__list">
+                <ul>
+                    <li><a href="">
+                        <li class="active"><i class="bi bi-house-door-fill"></i> <span>Thống Kê</span></li>
+                    </a></li>
+                    <li class=""><a href=""><i class="bi bi-person-circle"></i> <span>Tài Khoản</span></a></li>
+                    <li class=""><a href=""><i class="bi bi-film"></i> <span>Phim</span></a>
+                    </li>
+                    <li class=""><a href=""><i class="bi bi-bookmarks"></i> <span>Thể loại</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__content">
+            <div class="main__content_head flex_center">
+                <a href="" class="add_content"><i class="bi bi-arrow-left-circle"></i> <span>Quay Lại</span></a>
+            </div>
+            <div class="main__content_body">
+                <form id="my__form_film" action="" method="post">
+                    <h1 class="title_form">Thêm dự án phim lẻ</h1>
+                    <div class="group-1-2">
+                        <div class="my__form-group">
+                            <label for="cate">Thể Loại</label>
+                            <select name="" id="cate">
+                                <option value="">-- Chọn Thể Loại --</option>
+                                <option value="drama">Drama</option>
+                                <option value="Hoạt hình">Hoạt hình</option>
+                                <option value="Khoa Học Viễn Tưởng">Khoa Học Viễn Tưởng</option>
+                                <option value="Tình Cảm">Tình Cảm</option>
+                                <option value="hành động">hành động</option>
+                                <option value="Kinh Dị">Kinh Dị</option>
+                                <option value="Phiêu Lưu">Phiêu Lưu</option>
+                            </select>
+                        </div>
+                        <div class="my__form-group">
+                            <label for="">Tiêu đề hiển thị</label>
+                            <input type="text" placeholder="Nhập tiêu đề hiển thị ..." class="my-form-control">
+                        </div>
+                    </div>
+                    <div class="group-1-3">
+                        <div class="my__form-group">
+                            <label for="">Diễn viên chính</label>
+                            <input type="text" placeholder="Nhập tên diễn viên ..." class="my-form-control">
+                        </div>
+                        <div class="my__form-group">
+                            <label for="">Tên nhân vật</label>
+                            <input type="text" placeholder="Nhập tên nhân vật ..." class="my-form-control">
+                        </div>
+                        <div class="my__form-group">
+                            <label for="">Hình ảnh</label>
+                            <input type="file" placeholder="Nhập tên nhân vật ..." class="my-form-control">
+                        </div>
+                    </div>
+                    <div class="group-1-4">
+                        <div class="my__form-group">
+                            <label for="">Tác giả</label>
+                            <input type="text" placeholder="Nhập tên diễn viên ..." class="my-form-control">
+                        </div>
+                        <div class="my__form-group">
+                            <label for="">Quốc gia</label>
+                            <select name="" id="nation">
+                                <option value="">-- Chọn quốc gia --</option>
+                                <option value="">Hàn Quốc</option>
+                                <option value="">Mỹ</option>
+                            </select>
+                        </div>
+                        <div class="my__form-group">
+                            <label for="">Ngôn Ngữ</label>
+                            <input type="text" placeholder="Nhập ngôn ngữ ..." class="my-form-control">
+                        </div>
+                        <div class="my__form-group">
+                            <label for="">Trailer</label>
+                            <input type="text" placeholder="Nhập đường dẫn trailer ..." class="my-form-control">
+                        </div>
+                    </div>
+                    <div class="group-1-1">
+                        <div class="my__form-group">
+                            <label for="description_film">Mô Tả</label>
+                            <textarea name="" placeholder="Nhập mô tả ..." id="description_film" cols="" rows=""></textarea>
+                        </div>
+                    </div>
+                    <div class="group-1-2">
+                        <div class="my__form-group poster_upload">
+                            <small>Chọn poster hiển thị</small>
+                            <label for="poster_img"><img class="img_click" src="./img/ul_poster_default.png" alt=""></label>
+                            <img class="poster_review" src="./img/poster.png " alt="">
+                            <input type="file" class="form-control-file" name="" id="poster_img">
+                        </div>
+                        <div class="my__form-group banner_upload">
+                            <small>Chọn banner hiển thị</small>
+                            <label for="banner_img"><img class="img_click-2" src="./img/ul_poster_default.png" alt=""></label>
+                            <img class="banner_review" src="./img/picture.png " alt="">
+                            <input type="file" class="form-control-file" name="" id="banner_img">
+                        </div>
+                    </div>
+                    <div class="btn_submit_form-data">
+                        <button type="submit">Hoàn Tất</button>
+                    </div>
+                    <div class="line"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/review.js"></script>
+</body>
+</html>

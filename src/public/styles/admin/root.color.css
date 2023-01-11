@@ -1,0 +1,9 @@
+:root {
+    --primary-red: #e42929;
+    --primary-bg-black: #1f1f1f; 
+    --primary-black: #212529;
+    --primary-box: rgba(52,58,64, 1);
+    --secondary-black: #666;
+    --tertiary-black: #999;
+    --gray-dark: #303030;
+}

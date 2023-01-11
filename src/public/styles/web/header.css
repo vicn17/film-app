@@ -1,0 +1,131 @@
+.browser-header {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    to top,
+    #00000000,
+    #00000033,
+    #00000066,
+    #00000099
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  position: fixed;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.browser-header .nav-browser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 600px; */
+}
+.browser-header .nav-browser li h1 {
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.nav-browser li {
+  margin: 0 1rem;
+}
+.nav-browser li a {
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  transition: all 0.25s;
+}
+.nav-browser li:hover a {
+  color: #eeeeee99;
+}
+.browser-header .icon-right-browser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+}
+.icon-right-browser a {
+  color: white;
+  font-size: 20px;
+}
+.icon-right-browser .avatar-user-browser {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+.icon-right-browser .avatar-user-browser img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.user-option-dropdown {
+  width: max-content;
+  background-color: #00000099;
+  position: absolute;
+  right: 0;
+  top: 3.5rem;
+  border-radius: 8px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.icon-right-browser .avatar-user-browser:hover .user-option-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+.user-option-dropdown li {
+  width: 100%;
+  height: 35px;
+  /* margin: 1rem 0; */
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 1.8rem;
+  border-bottom: 1px solid #33333399;
+}
+.user-option-dropdown li:hover {
+  background-color: #33333399;
+}
+.user-option-dropdown li form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.user-option-dropdown li .img-otherUser {
+  width: 35px;
+  height: 35px;
+  margin-right: 1rem;
+}
+.user-option-dropdown li .img-otherUser img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user-option-dropdown li a {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.user-option-dropdown li a i {
+  margin-right: 1rem;
+}
+.scrollHeader {
+  background-color: black;
+  transition: all 1s;
+}
+@media screen and (max-width: 769px) {
+  .browser-header .nav-browser li:not(:nth-child(1)) {
+    display: none;
+  }
+  .browser-header .icon-right-browser {
+    display: none;
+  }
+}

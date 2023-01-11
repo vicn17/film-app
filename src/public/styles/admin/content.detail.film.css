@@ -1,0 +1,222 @@
+.main__detail_film.bg-flm {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    position: relative;
+    z-index: 22;
+    overflow: hidden;
+}
+.main__detail_film.bg-flm::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 24;
+    background-color: rgba(0, 0, 0, 0.533);
+    backdrop-filter: blur(3px);
+}
+.main__detail_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 29;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+.main__detail_info .poster_image {
+    width: 360px;
+    height: 420px;
+    border-radius: 4px;
+}
+.main__detail_info .poster_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.main__detail_film_content {
+    width: 100%;
+    padding: 30px;
+}
+.title_film {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.desc_film {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.504);
+    margin-bottom: 10px;
+}
+.main__detail_film_content .line{
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+}
+.time_film {
+    gap: 10px;
+}
+
+.main__detail_more-info{
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid red;
+    height: 500px;
+}
+
+.main__detail_more-info .tab-nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  .main__detail_more-info .tab-item {
+    min-width: 80px;
+    display: none;
+  }
+  .main__detail_more-info .tab-item.active {
+    display: block;
+  }
+  .main__detail_more-info .tab-item.active {
+    animation: fade_content 0.2s linear backwards ;
+  }
+  .main__detail_more-info .tab-pane.active{
+      display: block;
+      color: white;
+      border-bottom: 1px solid red;
+  }
+.main__detail_more-info .tab-pane{
+    padding: 20px;
+    color: #666;
+    font-size: 22px;text-transform: uppercase;
+    cursor: pointer;
+}
+.detail_info_tab {
+    padding: 40px 30px;
+    gap: 50px;
+}
+.detail_info_tab .text_info{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+}
+.detail_info_tab .text_info i {
+    font-size: 12px;
+    color: red;
+}
+.detail_info_tab .text_info span:nth-child(3) {
+    color: rgba(255, 255, 255, 0.672);
+    font-size: 19px;
+}
+
+.actor_and_charactor{
+    padding: 40px 30px;
+    gap: 30px;
+}
+.actor_info {
+    text-align: center;
+}
+.actor_info img {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.actor_info .name_actor{
+    margin-top: 6px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.actor_info .name_chartactor {
+    margin-top: 6px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.635);
+}
+.tab_trailer_film{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 40px 30px;
+}
+.over_hidden{
+    width: 100%;
+    height: 500px;
+    overflow-y: auto;
+    overscroll-behavior: smooth;
+}
+.tab_film_video{
+    gap: 15px;
+    padding: 40px 30px;
+}
+.tab_film_img{
+    padding: 40px 30px;
+}
+.tab_film_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@keyframes fade_content {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.my_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-gap: 5px;
+	grid-auto-rows: min-max(80px, auto);
+	grid-auto-flow: dense;
+}
+
+.my_grid .c-1 {
+	background: #1a535c;
+	color: #ddd;
+}
+.my_grid .c-2 {
+	background: #4ecdc4;
+}
+.my_grid .c-3 {
+	background: #bfd7ea;
+}
+.my_grid .c-4 {
+	background: #ff6b6b;
+}
+.my_grid .c-5 {
+	background: #ffe66d;
+}
+
+ .my_grid .card {
+	min-height: 100px;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+ .my_grid .span-2 {
+	grid-column-end: span 2;
+	grid-row-end: span 2;
+	min-height: 200px;
+}
+ .my_grid .span-3 {
+	grid-column-end: span 3;
+	grid-row-end: span 3;
+	min-height: 400px;
+}

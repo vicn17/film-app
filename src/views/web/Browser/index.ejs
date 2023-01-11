@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/web/index.css" />
+    <title>Browser</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- include loading -->
+    <%- include("../Loading/index.ejs") %>
+
+    <!-- wrapper browser -->
+    <div class="container-browser">
+      <!-- include header -->
+      <%- include('../Header/index.ejs') -%> <%- include('../Banner/index.ejs')
+      %>
+
+      <!-- include main -->
+      <main style="width: 100%; background-color: #000000; position: relative">
+        <%- include ('../ListRankingFilm/index.ejs') %> <% for( let index = 0;
+        index < 5; index++ ) { %> <%- include ('../ListFilm/index.ejs', {title:
+        "hot trending"}) %> <% } %>
+      </main>
+
+      <!-- include footer -->
+      <%- include('../Footer/index.ejs') %>
+    </div>
+  </body>
+  <script>
+    const changeUser = document.querySelectorAll(".changeUser");
+    changeUser.forEach((item) => {
+      item.onclick = () => item.children[0].submit();
+    });
+
+    const slide = (width, idListElement, item, prev, next) => {
+      document.querySelector(next).onclick = () => {
+        const widthItemRanking = document.querySelector(item).offsetWidth;
+        document.querySelector(idListElement).scrollLeft +=
+          widthItemRanking * width;
+      };
+      document.querySelector(prev).onclick = () => {
+        const widthItemRanking = document.querySelector(item).offsetWidth;
+        document.querySelector(idListElement).scrollLeft -=
+          widthItemRanking * width;
+      };
+    };
+
+    const slideListFilm = (width) => {
+      const prev = document.querySelectorAll(".list-slide-film-prev");
+      const next = document.querySelectorAll(".list-slide-film-next");
+      prev.forEach((item) => {
+        item.onclick = () => {
+          const widthItemRanking =
+            item.parentElement.children[1].children[0].children[0].offsetWidth;
+          console.log(widthItemRanking);
+          item.parentElement.children[1].scrollLeft -= widthItemRanking * width;
+        };
+      });
+      next.forEach((item) => {
+        item.onclick = () => {
+          const widthItemRanking =
+            item.parentElement.children[1].children[0].children[0].offsetWidth;
+          item.parentElement.children[1].scrollLeft += widthItemRanking * width;
+        };
+      });
+    };
+
+    if (window.screen.width <= 768) {
+      slide(
+        2,
+        ".form-list-ranking-film",
+        ".item-ranking",
+        ".btn-slide-prev",
+        ".btn-slide-next"
+      );
+      slideListFilm(2);
+    } else {
+      slide(
+        5,
+        ".form-list-ranking-film",
+        ".item-ranking",
+        ".btn-slide-prev",
+        ".btn-slide-next"
+      );
+      slideListFilm(5);
+    }
+  </script>
+</html>

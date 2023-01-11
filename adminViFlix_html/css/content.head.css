@@ -1,0 +1,16 @@
+.add_content{
+    width: 230px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: var(--primary-box);
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    border-top: 1px solid red;
+    margin-right: 10px;
+}
+.add_content i{
+    font-size: 20px;
+}

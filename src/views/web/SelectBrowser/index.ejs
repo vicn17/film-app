@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Viflex</title>
+    <link rel="stylesheet" href="./styles/web/index.css" />
+  </head>
+  <body>
+    <%- include ("../Loading/index.ejs") %>
+    <div class="fillLogin">
+      <div class="listUser">
+        <% users.forEach(item => { %>
+        <form action="/selectUser" class="userCard" method="post">
+          <input type="submit" hidden />
+          <input hidden name="ur_name" value="<%= item.ur_name %>" />
+          <input hidden name="ur_avatar" value="<%= item.ur_avatar %>" />
+          <div class="imgUserCard" data-nameUser="<%= item.ur_name %>">
+            <img src="<%= item.ur_avatar %>" alt="" />
+          </div>
+          <div class="nameUserCard">
+            <span><%= item.ur_name %></span>
+          </div>
+        </form>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.querySelectorAll(".imgUserCard").forEach((item) => {
+      item.onclick = () => {
+        item.parentElement.submit();
+      };
+    });
+  </script>
+</html>

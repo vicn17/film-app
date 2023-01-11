@@ -1,0 +1,57 @@
+<div class="banner-browser">
+  <img src="./posterFilm/banner-browser.jpg" alt="banner" />
+  <div class="content-banner-browser">
+    <div class="title">
+      <span>Avatar: The way of water</span>
+    </div>
+    <div class="btn-content">
+      <button class="btn-play">
+        <i class="fa-solid fa-play"></i>
+        <span>Phát</span>
+      </button>
+      <button class="btn-detail">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>Thông tin khác</span>
+      </button>
+    </div>
+  </div>
+  <div class="fillBlurBottomBanner"></div>
+</div>
+<script>
+  const listBanner = [
+    {
+      filmName: "Black Adam",
+      path: "./posterFilm/black-adam-banner.jpg",
+    },
+    {
+      filmName: "Black panther: Wakanda forever",
+      path: "./posterFilm/black-panther-wakanda-forever-banner.jpg",
+    },
+    {
+      filmName: "Chú thuật hồi chiến",
+      path: "./posterFilm/jujutsu-kaisen-0-banner.jpg",
+    },
+    {
+      filmName: "Doctor strange 2",
+      path: "./posterFilm/scarlet-witch-and-doctor-strange-in-the-multiverse-of-madness-banner.jpg",
+    },
+    {
+      filmName: "Sonic 2",
+      path: "./posterFilm/sonic-the-hedgehog-2-banner.jpg",
+    },
+    {
+      filmName: "Spiderman: không còn nhà",
+      path: "./posterFilm/spiderman-no-way-home-banner.jpg",
+    },
+    {
+      filmName: "Avatar: Dòng chảy của nước",
+      path: "./posterFilm/banner-browser.jpg",
+    },
+  ];
+  let numberRandom = Math.floor(Math.random() * listBanner.length);
+  let title = document.querySelector(".content-banner-browser .title");
+  title.innerHTML = `<span>${listBanner[numberRandom].filmName}</span>`;
+  let posterBanner = document.querySelector(".banner-browser img");
+  posterBanner.src = listBanner[numberRandom].path;
+  numberRandom != listBanner.length ? (numberRandom += 1) : (numberRandom = 0);
+</script>

@@ -1,0 +1,76 @@
+.wrapper-form-list-ranking-film {
+  position: relative;
+  width: 100%;
+  transform: translateY(-110px);
+}
+.form-list-ranking-film {
+  max-width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: both;
+}
+
+.form-list-ranking-film::-webkit-scrollbar {
+  display: none;
+}
+.title-ranking-film {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-left: 8rem;
+}
+.list-ranking-film {
+  display: flex;
+  width: max-content;
+}
+.list-ranking-film .item-ranking {
+  width: 250px;
+  height: max-content;
+  cursor: pointer;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.btn-slide-prev,
+.btn-slide-next {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 32px;
+  visibility: hidden;
+}
+.btn-slide-prev {
+  left: 0;
+}
+.btn-slide-prev:hover {
+  background: linear-gradient(to right, #33333399, #33333300);
+}
+.btn-slide-next {
+  right: 0;
+}
+.btn-slide-next:hover {
+  background: linear-gradient(to left, #33333399, #33333300);
+}
+.wrapper-form-list-ranking-film:hover .btn-slide-prev,
+.wrapper-form-list-ranking-film:hover .btn-slide-next {
+  visibility: visible;
+}
+.item-ranking .film-ranking {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  height: 100%;
+}
+.item-ranking .film-ranking img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}

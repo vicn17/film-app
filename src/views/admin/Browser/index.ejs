@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/8865/8865527.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../styles/admin/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include("../Header/index.ejs") %>
+
+    <!-- Body -->
+    <div class="admin__flix flex_center">
+      <!-- Navigation -->
+      <%- include("../NavBar/index.ejs") %>
+      <!-- Main -->
+      <% if (page == 'film') { %>
+      <!-- Flim  -->
+      <%- include("../Film/index.ejs") %>
+      <!-- Flim -->
+      <% } else if(page == 'add-new-film') { %>
+      <!-- Form add new Film -->
+      <%- include("../FormAddFilm/index.ejs") %>
+      <!-- Form add new Film -->
+      <% } else if(page == 'detail-film') { %>
+      <!-- Form add new Film -->
+      <%- include("../DetailsFilm/index.ejs") %>
+      <!-- Form add new Film -->
+      <% } %>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

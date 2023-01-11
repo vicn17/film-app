@@ -1,0 +1,120 @@
+.container-login {
+  width: 100%;
+  height: 100vh;
+}
+.bg-login {
+  background-image: url(/img/browser-film.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bg-login::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  height: 110px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.header-login .logo-viflix a {
+  color: var(--primary-color);
+  font-size: 58px;
+  font-weight: 600;
+}
+.header-login .btn-signup a {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+.wrapperFormLogin {
+  margin: 0 auto;
+  color: white;
+  width: 450px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  animation: login 0.5s forwards;
+}
+@keyframes login {
+  from {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.wrapperFormLogin form,
+.label-new-sign-up {
+  width: 70%;
+}
+.wrapperFormLogin form h1 {
+  margin-bottom: 2rem;
+}
+.wrapperFormLogin form input {
+  border-radius: 4px;
+  background-color: #333333;
+  line-height: 50px;
+  width: 100%;
+  outline: none;
+  margin: 8px 0;
+  color: white;
+  font-size: 16px;
+  padding: 0 10px;
+  border: none;
+}
+.wrapperFormLogin form button {
+  width: 100%;
+  height: 3rem;
+  color: white;
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 16px;
+  background-color: #e50914;
+  margin: 2rem 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.label-new-sign-up {
+  color: #8c8c8c;
+}
+.label-new-sign-up p {
+  margin: 1rem 0;
+}
+.label-new-sign-up p a {
+  text-decoration: none;
+  color: blue;
+}
+.label-new-sign-up p:nth-child(1) a {
+  color: #ffffff;
+}
+.label-new-sign-up p:nth-child(1) a:hover {
+  text-decoration: underline;
+}
+.label-new-sign-up p:nth-child(2) {
+  font-size: 13px;
+}

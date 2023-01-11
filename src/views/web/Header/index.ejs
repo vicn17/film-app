@@ -1,0 +1,68 @@
+<header class="browser-header">
+  <!-- <div class="logo-browser">
+    <h1>VIFLIX</h1>
+  </div> -->
+  <ul class="nav-browser">
+    <li><h1>VIFLIX</h1></li>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Phim T.hình</a></li>
+    <li><a href="#">Mới & phổ biến</a></li>
+    <li><a href="#">Danh sách của tôi</a></li>
+  </ul>
+  <div class="icon-right-browser">
+    <div class="search-browser">
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+    <div class="notification-browser">
+      <a href="#"><i class="fa-regular fa-bell"></i></a>
+    </div>
+    <div class="avatar-user-browser">
+      <img src="<%= ur_avatar %>" alt="avatar" />
+      <ul class="user-option-dropdown">
+        <% otherUser.forEach(element => { %>
+        <li class="changeUser">
+          <form action="./changeUser" method="post">
+            <input
+              type="text"
+              hidden
+              name="ur_avatar"
+              value="<%= element.ur_avatar %>"
+            />
+            <input
+              type="text"
+              hidden
+              name="ur_name"
+              value="<%= element.ur_name %>"
+            />
+            <div class="img-otherUser">
+              <img
+                src="<%= element.ur_avatar %>"
+                alt="<%= element.ur_name %>"
+              />
+            </div>
+            <span><%= element.ur_name %></span>
+          </form>
+        </li>
+        <% }) %>
+        <li>
+          <a href="#"><i class="fa-regular fa-user"></i>Profile</a>
+        </li>
+        <li>
+          <a href="/logout"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<script>
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".browser-header");
+    if (window.scrollY > 0) {
+      header.classList.add("scrollHeader");
+    } else {
+      header.classList.remove("scrollHeader");
+    }
+  });
+</script>

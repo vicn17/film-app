@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/8865/8865527.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="header flex_center">
+        <label for="toggle_menu" class="toogle-icons flex_jus_center">
+            <i class="bi bi-list"></i>
+        </label>
+        <div class="back_next">
+            <a href=""><i class="bi bi-arrow-left"></i></a>
+            <a href=""><i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="search_box_content">
+            <input type="search" placeholder="Tìm kiếm gì đi...">
+            <i class="bi bi-search"></i>
+        </div>
+        <div class="notification_tooL flex_center">
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-envelope"></i>
+        </div>
+        
+        <div class="profile_sign">
+            <a class="profile_admin flex_center">
+                <img src="https://i.pinimg.com/564x/7b/1d/a3/7b1da3317239a473e43108a373010713.jpg" alt="">
+                <span>Nhat Vi</span>
+            </a>
+        </div>
+    </div>
+    <input type="checkbox" hidden name="" id="toggle_menu">
+    <div class="admin__flix flex_center">
+        <div class="navigation">
+            <a href="" class="logo_n flex_jus_center">
+                Viflix
+            </a>
+            <div class="navigation__list">
+                <ul>
+                    <li><a href="">
+                        <li class="active"><i class="bi bi-house-door-fill"></i> <span>Thống Kê</span></li>
+                    </a></li>
+                    <li class=""><a href=""><i class="bi bi-person-circle"></i> <span>Tài Khoản</span></a></li>
+                    <li class=""><a href=""><i class="bi bi-film"></i> <span>Phim</span></a>
+                    </li>
+                    <li class=""><a href=""><i class="bi bi-bookmarks"></i> <span>Thể loại</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__content">
+            <div class="main__content_head flex_center">
+                <a href="" class="add_content"><i class="bi bi-plus-circle"></i> <span>Thêm mới thể loại</span></a>
+                <a href="./form.enter.html" class="add_content"><i class="bi bi-plus-circle"></i> <span>Thêm dự án</span></a>
+                <a href="" class="add_content"><i class="bi bi-plus-circle"></i> <span>Thêm mới thể loại</span></a>
+            </div>
+            <div class="main__content_body">
+                <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <thead>
+                        <tr>
+                          <th class="">#</th>
+                          <th>Thumb</th>
+                          <th>Company</th>
+                          <th class="title4">Title</th>
+                          <th>Time</th>
+                          <th>Control</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="tbl-content">
+                    <table cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td class="">1</td>
+                          <td><img class="thumb-film" src="https://i.ytimg.com/vi/bf4yyStDWHE/maxresdefault.jpg" alt=""></td>
+                          <td>Marvel  </td>
+                          <td class="title4">
+                            <p>Avatar: Dòng chảy của nước
+                                jlhbfjbhwefkjlnbwefkljhbqwefjlibh</p>
+                          </td>
+                          <td>2:16:65</td>
+                          <td>
+                            <a class="details-film" href="./detail.film.html"><i class="bi bi-info-circle"></i></a>
+                            <!-- an/ hien -->
+                            <a class="hidden" href=""><i class="bi bi-eye"></i>
+                                <!-- <i class="bi bi-eye-slash"></i> -->
+                            </a>
+                        </td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

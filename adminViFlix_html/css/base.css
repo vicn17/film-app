@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.flex_between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex_around{
+    justify-content: space-around;
+    display: flex;
+    justify-content: center;
+}
+.flex_jus_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex_center{
+    display: flex;
+    align-items: center;
+}
+.flex{
+    display: flex;
+}

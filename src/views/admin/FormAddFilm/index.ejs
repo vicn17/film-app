@@ -1,0 +1,142 @@
+<div class="main__content">
+  <div class="main__content_head flex_center">
+    <a href="./film" class="add_content"
+      ><i class="bi bi-arrow-left-circle"></i> <span>Quay Lại</span></a
+    >
+  </div>
+  <div class="main__content_body">
+    <form
+      id="my__form_film"
+      action="/admin/add/new-film"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h1 class="title_form">Thêm dự án phim mới</h1>
+      <div class="group-1-2">
+        <div class="my__form-group">
+          <label for="cate">Thể Loại</label>
+          <select name="f_category" id="cate">
+            <option value="">-- Chọn Thể Loại --</option>
+            <option value="drama">Drama</option>
+            <option value="Hoạt hình">Hoạt hình</option>
+            <option value="Khoa Học Viễn Tưởng">Khoa Học Viễn Tưởng</option>
+            <option value="Tình Cảm">Tình Cảm</option>
+            <option value="hành động">hành động</option>
+            <option value="Kinh Dị">Kinh Dị</option>
+            <option value="Phiêu Lưu">Phiêu Lưu</option>
+          </select>
+        </div>
+        <div class="my__form-group">
+          <label for="">Tiêu đề hiển thị</label>
+          <input
+            type="text"
+            placeholder="Nhập tiêu đề hiển thị ..."
+            class="my-form-control"
+            name="f_title"
+          />
+        </div>
+      </div>
+      <div class="group-1-3">
+        <div class="my__form-group">
+          <label for="">Diễn viên chính</label>
+          <input
+            type="text"
+            placeholder="Nhập tên diễn viên ..."
+            class="my-form-control"
+            name="f_actor"
+          />
+        </div>
+        <div class="my__form-group">
+          <label for="">Tên nhân vật</label>
+          <input
+            type="text"
+            placeholder="Nhập tên nhân vật ..."
+            class="my-form-control"
+            name="f_character"
+          />
+        </div>
+        <div class="my__form-group">
+          <label for="">Hình ảnh</label>
+          <input
+            type="file"
+            placeholder="Nhập tên nhân vật ..."
+            class="my-form-control"
+          />
+        </div>
+      </div>
+      <div class="group-1-4">
+        <div class="my__form-group">
+          <label for="">Đạo diễn</label>
+          <input
+            type="text"
+            placeholder="Nhập tên diễn viên ..."
+            class="my-form-control"
+            name="f_directors"
+          />
+        </div>
+        <div class="my__form-group">
+          <label for="">Quốc gia</label>
+          <select name="f_country" id="nation">
+            <option value="">-- Chọn quốc gia --</option>
+            <option value="">Hàn Quốc</option>
+            <option value="">Mỹ</option>
+          </select>
+        </div>
+        <div class="my__form-group">
+          <label for="">Trailer</label>
+          <input
+            type="text"
+            placeholder="Nhập đường dẫn trailer ..."
+            class="my-form-control"
+            name="f_trailer"
+          />
+        </div>
+      </div>
+      <div class="group-1-1">
+        <div class="my__form-group">
+          <label for="description_film">Mô Tả</label>
+          <textarea
+            name="f_description"
+            placeholder="Nhập mô tả ..."
+            id="description_film"
+            cols=""
+            rows=""
+          ></textarea>
+        </div>
+      </div>
+      <div class="group-1-2">
+        <div class="my__form-group poster_upload">
+          <small>Chọn poster hiển thị</small>
+          <label for="poster_img"
+            ><img class="img_click" src="../img/ul_poster_default.png" alt=""
+          /></label>
+          <img class="poster_review" src="../img/poster.png " alt="" />
+          <input
+            type="file"
+            class="form-control-file"
+            name="f_poster"
+            id="poster_img"
+          />
+        </div>
+        <div class="my__form-group banner_upload">
+          <small>Chọn banner hiển thị</small>
+          <label for="banner_img"
+            ><img class="img_click-2" src="../img/ul_poster_default.png" alt=""
+          /></label>
+          <img class="banner_review" src="../img/picture.png " alt="" />
+          <input
+            type="file"
+            class="form-control-file"
+            name="f_banner"
+            id="banner_img"
+          />
+        </div>
+      </div>
+      <div class="btn_submit_form-data">
+        <button type="submit">Hoàn Tất</button>
+      </div>
+      <div class="line"></div>
+    </form>
+  </div>
+</div>
+<script src="../js/review.js"></script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Viflix</title>
+    <link rel="stylesheet" href="/styles/web/index.css" />
+  </head>
+  <body>
+    <div class="container-login">
+      <div class="bg-login">
+        <header class="header-login">
+          <div class="logo-viflix">
+            <a href="/">VIFLIX</a>
+          </div>
+          <div class="btn-signup">
+            <a href="./Login">Sign In</a>
+          </div>
+        </header>
+        <div class="wrapperFormLogin">
+          <form action="./createdAccount" method="post">
+            <h1>Sign Up</h1>
+            <input
+              type="email"
+              name="acc_email"
+              id=""
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              name="acc_name"
+              id=""
+              placeholder="User name"
+              required
+            />
+            <input
+              type="password"
+              name="acc_pass"
+              id=""
+              placeholder="Password"
+              required
+            />
+            <input
+              type="password"
+              name=""
+              id="enter_pass"
+              placeholder="Enter Password"
+              required
+            />
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="label-new-sign-up">
+            <p>New to Viflix? <a href="./Login">Sign in now.</a></p>
+            <p>
+              This page is protected by Google reCAPTCHA to ensure you're not a
+              bot.
+              <a href="/">Learn more.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+@keyframes bannerAni {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.banner-browser {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.banner-browser img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content-banner-browser {
+  position: absolute;
+  left: 6rem;
+  bottom: 10rem;
+  width: 35rem;
+  animation: bannerAni 1s backwards;
+}
+.content-banner-browser .title {
+  font-size: 62px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+.content-banner-browser .title span {
+  animation: bannerAni 1s forwards;
+}
+.content-banner-browser .btn-content .btn-play,
+.content-banner-browser .btn-content .btn-detail {
+  font-size: 18px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.content-banner-browser .btn-content .btn-play:hover,
+.content-banner-browser .btn-content .btn-detail:hover {
+  opacity: 0.7;
+}
+.content-banner-browser .btn-content .btn-play {
+  background-color: white;
+  margin-right: 1rem;
+}
+.content-banner-browser .btn-content .btn-detail {
+  background-color: gray;
+  color: white;
+}
+.content-banner-browser .btn-content i {
+  margin-right: 10px;
+}
+.fillBlurBottomBanner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, #00000000, #00000099, #000000);
+  z-index: -1;
+}

@@ -1,0 +1,11 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import 'root.color.css';
+@import 'base.css';
+@import 'nav.css';
+@import 'main.css';
+@import 'header.css';
+@import 'content.head.css';
+@import 'content.body.css';
+@import 'content.detail.film.css';
+@import 'form.enter.css';

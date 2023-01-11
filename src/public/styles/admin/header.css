@@ -1,0 +1,121 @@
+.header{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--primary-black);
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+}
+.header .toogle-icons {
+    width: 100px;
+    height: 100%;
+}
+.header .toogle-icons i{
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.505);
+    border-radius: 8px;
+    padding: 3px 2px 2px 2px;
+    line-height: 0;
+    transition: all .2s linear;
+}
+.header .toogle-icons i:active{
+    color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.549);
+}
+#toggle_menu:checked ~ .admin__flix .navigation{
+    width: 100px !important;
+}
+#toggle_menu:checked ~ .admin__flix .navigation .navigation__list ul li a span {
+    display: none;
+}
+#toggle_menu:checked ~ .admin__flix .navigation .navigation__list ul li a i{
+    font-size: 22px;
+}
+#toggle_menu:checked ~ .admin__flix .navigation .navigation__list ul li a{
+    justify-content: center;
+}
+#toggle_menu:checked ~ .admin__flix .navigation .logo_n{
+    visibility: hidden;
+}
+#toggle_menu:checked ~ .admin__flix .navigation .logo_n::before{
+    visibility: visible;
+}
+#toggle_menu:checked ~ .admin__flix .main__content{
+    width: 100%;
+}
+.back_next{
+    margin-left: 150px;
+    display: flex;
+    gap: 10px;
+}
+.back_next a{
+    color: white;
+    font-size: 22px; 
+}
+.back_next a:first-child{
+    color: rgba(255, 255, 255, 0.516);
+}
+.profile_admin {
+    padding: 5px 12px;
+    margin: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.506);
+    border-radius: 33px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.profile_admin:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.profile_admin img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile_admin span {
+    color: white;
+    font-size: 18px;
+    padding-left: 12px;
+}
+.search_box_content {
+    position: relative;
+    width: 400px;
+    margin: 0 50px;
+}
+.search_box_content i {
+    position: absolute;
+    top: 46%;
+    right: 15px;
+    transform: translate(0, -50%);
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 768px) { 
+    .search_box_content{
+        display: none;
+    }
+ }
+.search_box_content input {
+    width: 100%;
+    color: white;
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.698);
+    padding: 10px 24px;
+    border-radius: 10px;
+}
+.notification_tooL {
+    color: white;
+    margin: 0 20px;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+.notification_tooL i {
+    font-size: 18px;
+    cursor: pointer;
+}
