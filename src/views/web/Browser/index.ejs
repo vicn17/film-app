@@ -26,9 +26,14 @@
 
       <!-- include main -->
       <main style="width: 100%; background-color: #000000; position: relative">
-        <%- include ('../ListRankingFilm/index.ejs') %> <% for( let index = 0;
-        index < 5; index++ ) { %> <%- include ('../ListFilm/index.ejs', {title:
-        "hot trending"}) %> <% } %>
+        <!-- list ranking film -->
+        <%- include ('../ListRankingFilm/index.ejs') %>
+        <!-- list film -->
+        <% category.forEach(cate => { %>
+        <!--  -->
+        <%- include ('../ListFilm/index.ejs', {title: cate}) %>
+        <!--  -->
+        <% }) %>
       </main>
 
       <!-- include footer -->

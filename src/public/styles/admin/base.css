@@ -1,39 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Play', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Play", sans-serif;
 }
-html, body{
-    max-width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-.flex_between{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.flex_around{
-    justify-content: space-around;
-    display: flex;
-    justify-content: center;
+.flex_around {
+  justify-content: space-around;
+  display: flex;
+  justify-content: center;
 }
-.flex_jus_center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flex_jus_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.flex_center{
-    display: flex;
-    align-items: center;
+.flex_center {
+  display: flex;
+  align-items: center;
 }
-.flex{
-    display: flex;
+.flex {
+  display: flex;
+}
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }

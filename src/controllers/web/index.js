@@ -1,4 +1,4 @@
-import { Accounts } from "../../config/firebase";
+import { Accounts, Category } from "../../config/firebase";
 import { rank } from "../../public/img/ranking-svg";
 
 const controlWebPages = [
@@ -136,12 +136,16 @@ const controlWebPages = [
       try {
         const user = req.session.user;
 
+        const category = await Category.get();
+        const listCate = category.docs.map((doc) => doc.id);
+
         return res.render("./web/browser", {
           rank,
           acc_id: user.acc_id,
           ur_name: user.ur_name,
           ur_avatar: user.ur_avatar,
           otherUser: user.otherUser,
+          category: listCate,
         });
       } catch (error) {
         return res.redirect("/login");

@@ -9,8 +9,9 @@ initializeApp({
 const db = getFirestore();
 const Accounts = db.collection("accounts");
 const Films = db.collection("films");
+const Category = db.collection("category");
 
-export { db, Accounts, Films };
+export { db, Accounts, Films, Category };
 
 //* update fb
 // await Accounts.doc(id).update(data);

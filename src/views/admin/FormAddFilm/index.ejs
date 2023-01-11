@@ -15,7 +15,7 @@
       <div class="group-1-2">
         <div class="my__form-group">
           <label for="cate">Thể Loại</label>
-          <select name="f_category" id="cate">
+          <select name="f_category" id="cate" required>
             <option value="">-- Chọn Thể Loại --</option>
             <option value="drama">Drama</option>
             <option value="Hoạt hình">Hoạt hình</option>
@@ -33,6 +33,7 @@
             placeholder="Nhập tiêu đề hiển thị ..."
             class="my-form-control"
             name="f_title"
+            required
           />
         </div>
       </div>
@@ -44,6 +45,7 @@
             placeholder="Nhập tên diễn viên ..."
             class="my-form-control"
             name="f_actor"
+            required
           />
         </div>
         <div class="my__form-group">
@@ -53,16 +55,18 @@
             placeholder="Nhập tên nhân vật ..."
             class="my-form-control"
             name="f_character"
+            required
           />
         </div>
-        <div class="my__form-group">
+        <!-- <div class="my__form-group">
           <label for="">Hình ảnh</label>
           <input
             type="file"
             placeholder="Nhập tên nhân vật ..."
             class="my-form-control"
+            required
           />
-        </div>
+        </div> -->
       </div>
       <div class="group-1-4">
         <div class="my__form-group">
@@ -72,14 +76,20 @@
             placeholder="Nhập tên diễn viên ..."
             class="my-form-control"
             name="f_directors"
+            required
           />
         </div>
         <div class="my__form-group">
           <label for="">Quốc gia</label>
-          <select name="f_country" id="nation">
+          <select name="f_country" id="nation" required>
             <option value="">-- Chọn quốc gia --</option>
-            <option value="">Hàn Quốc</option>
-            <option value="">Mỹ</option>
+            <option value="Hàn Quốc">Hàn Quốc</option>
+            <option value="Thái Lan">Thái Lan</option>
+            <option value="Mỹ">Mỹ</option>
+            <option value="Việt Nam">Việt Nam</option>
+            <option value="Anh">Anh</option>
+            <option value="Pháp">Pháp</option>
+            <option value="Trung Quốc">Trung Quốc</option>
           </select>
         </div>
         <div class="my__form-group">
@@ -89,6 +99,7 @@
             placeholder="Nhập đường dẫn trailer ..."
             class="my-form-control"
             name="f_trailer"
+            required
           />
         </div>
       </div>
@@ -101,6 +112,7 @@
             id="description_film"
             cols=""
             rows=""
+            required
           ></textarea>
         </div>
       </div>
@@ -116,6 +128,7 @@
             class="form-control-file"
             name="f_poster"
             id="poster_img"
+            required
           />
         </div>
         <div class="my__form-group banner_upload">
@@ -129,6 +142,7 @@
             class="form-control-file"
             name="f_banner"
             id="banner_img"
+            required
           />
         </div>
       </div>

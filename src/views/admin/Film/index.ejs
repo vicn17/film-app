@@ -28,8 +28,9 @@
     <div class="tbl-content">
       <table cellpadding="0" border="0">
         <tbody>
+          <% listFilms.forEach((item, index) => { %>
           <tr>
-            <td class="">1</td>
+            <td class=""><%= index + 1 %></td>
             <td>
               <img
                 class="thumb-film"
@@ -39,9 +40,7 @@
             </td>
             <td>Marvel</td>
             <td class="title4">
-              <p>
-                Avatar: Dòng chảy của nước jlhbfjbhwefkjlnbwefkljhbqwefjlibh
-              </p>
+              <p><%= item.f_title %></p>
             </td>
             <td>2:16:65</td>
             <td>
@@ -55,6 +54,7 @@
               </a>
             </td>
           </tr>
+          <% }) %>
         </tbody>
       </table>
     </div>
