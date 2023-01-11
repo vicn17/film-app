@@ -16,11 +16,11 @@
         <thead>
           <tr>
             <th class="">#</th>
-            <th>Thumb</th>
-            <th>Company</th>
-            <th class="title4">Title</th>
-            <th>Time</th>
-            <th>Control</th>
+            <th>Banner</th>
+            <th>Thể loại</th>
+            <th class="title4">Tên phim</th>
+            <th>Lượt xem</th>
+            <th>Chi tiết</th>
           </tr>
         </thead>
       </table>
@@ -32,24 +32,20 @@
           <tr>
             <td class=""><%= index + 1 %></td>
             <td>
-              <img
-                class="thumb-film"
-                src="https://i.ytimg.com/vi/bf4yyStDWHE/maxresdefault.jpg"
-                alt=""
-              />
+              <img class="thumb-film" src="../<%= item.f_banner %>" alt="" />
             </td>
-            <td>Marvel</td>
+            <td><%= item.f_category %></td>
             <td class="title4">
               <p><%= item.f_title %></p>
             </td>
-            <td>2:16:65</td>
+            <td><%= item.f_views %></td>
             <td>
-              <a class="details-film" href="./detail-film"
+              <a class="details-film" href="/detail/<%= item.id %>"
                 ><i class="bi bi-info-circle"></i
               ></a>
               <!-- an/ hien -->
-              <a class="hidden" href=""
-                ><i class="bi bi-eye"></i>
+              <a class="hidden" href="./delete/<%= item.id %>"
+                ><i class="bi bi-trash"></i>
                 <!-- <i class="bi bi-eye-slash"></i> -->
               </a>
             </td>

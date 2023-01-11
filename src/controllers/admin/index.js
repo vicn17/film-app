@@ -1,4 +1,5 @@
 import { Accounts, Films } from "../../config/firebase";
+const fs = require("fs");
 // import { storage } from "../../config/firebase/storage";
 // import { ref, uploadBytes } from "firebase/storage";
 
@@ -9,14 +10,16 @@ const controlAdminPages = [
     get: async (req, res) => {
       const page = req.params.page;
       let listFilms = "";
+      let detailFilm = "";
       if (page === "film") {
         const snapshot = await Films.get();
         listFilms = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
+        return res.render("./admin/Browser", { page, listFilms });
       }
-      res.render("./admin/Browser", { page, listFilms });
+      return res.render("./admin/Browser", { page });
     },
     post: [
       {
@@ -48,14 +51,14 @@ const controlAdminPages = [
             const imgPoster = req.files.f_poster;
             let pathImgPoster = "";
             imgPoster.forEach((item) => {
-              pathImgPoster = `${item.destination}${item.filename}`;
+              pathImgPoster = `uploads/${item.filename}`;
             });
 
             //* get img banner in form
             const imgBanner = req.files.f_banner;
             let pathImgBanner = "";
             imgBanner.forEach((item) => {
-              pathImgBanner = `${item.destination}${item.filename}`;
+              pathImgBanner = `uploads/${item.filename}`;
             });
 
             //* add database
@@ -83,6 +86,37 @@ const controlAdminPages = [
         },
       },
     ],
+  },
+  {
+    path: "/detail/:id",
+    get: async (req, res) => {
+      const page = "detail";
+      const snapshot = await Films.doc(req.params.id).get();
+      res.render("./admin/Browser", {
+        page,
+        detailFilm: snapshot.data(),
+      });
+    },
+  },
+  {
+    path: "/admin/delete/:id",
+    get: async (req, res) => {
+      const snapshot = await Films.doc(req.params.id).get();
+      if (req.params.id) {
+        fs.unlink("../public/" + snapshot.data().f_poster, (err) => {
+          if (err) {
+            throw err;
+          }
+        });
+        fs.unlink("../public/" + snapshot.data().f_banner, (err) => {
+          if (err) {
+            throw err;
+          }
+        });
+        await Accounts.doc(req.params.id).delete();
+      }
+      res.redirect("..");
+    },
   },
 ];
 
