@@ -83,6 +83,19 @@ const controlWebPages = [
     ],
   },
 
+  //* Log out
+  {
+    path: "/logout",
+    get: (req, res) => {
+      try {
+        req.session.user && req.session.destroy(null);
+        res.redirect("/");
+      } catch (error) {
+        res.send(error);
+      }
+    },
+  },
+
   //* Page: sign up
   {
     path: "/signup",
@@ -180,16 +193,12 @@ const controlWebPages = [
     ],
   },
 
-  //* Log out
+  //* Page: detail film browser
   {
-    path: "/logout",
-    get: (req, res) => {
-      try {
-        req.session.user && req.session.destroy(null);
-        res.redirect("/");
-      } catch (error) {
-        res.send(error);
-      }
+    path: "/browser/:f_title/:f_id",
+    get: async (req, res) => {
+      const { f_title, f_id } = req.params;
+      res.send("sdofijsdf");
     },
   },
 ];

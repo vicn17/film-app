@@ -3,11 +3,12 @@
   <div class="main__content_body">
     <form
       id="my__form_film"
-      action="/admin/add/new-film"
+      action="/update/edit-film"
       method="post"
       enctype="multipart/form-data"
     >
       <h1 class="title_form">Cỉnh sửa dự án phim</h1>
+      <input type="text" name="f_id" id="" hidden value="<%= idFilm %>" />
       <div class="group-1-2">
         <div class="my__form-group">
           <label for="cate">Thể Loại</label>
@@ -135,7 +136,13 @@
             class="form-control-file"
             name="f_poster"
             id="poster_img"
-            required
+          />
+          <input
+            type="text"
+            name="old_poster"
+            id=""
+            hidden
+            value="<%= detailFilm.f_poster %>"
           />
         </div>
         <div class="my__form-group banner_upload">
@@ -153,7 +160,13 @@
             class="form-control-file"
             name="f_banner"
             id="banner_img"
-            required
+          />
+          <input
+            type="text"
+            name="old_banner"
+            id=""
+            hidden
+            value="<%= detailFilm.f_banner %>"
           />
         </div>
       </div>

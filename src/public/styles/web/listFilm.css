@@ -8,7 +8,6 @@
   overflow: auto;
   scroll-behavior: smooth;
   scroll-snap-type: both;
-  cursor: grab;
 }
 .wrapper-list-film::-webkit-scrollbar {
   display: none;
@@ -24,6 +23,7 @@
   height: 100%;
   margin-left: 2.5rem;
   scroll-snap-align: start;
+  cursor: pointer;
 }
 .film-browser img {
   width: 100%;

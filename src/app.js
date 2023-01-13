@@ -5,6 +5,7 @@ const sessions = require("express-session");
 require("dotenv").config();
 const app = express();
 var bodyParser = require("body-parser");
+const fs = require("fs");
 const router = express.Router();
 const multer = require("multer");
 var storage = multer.diskStorage({
