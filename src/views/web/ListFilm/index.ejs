@@ -4,14 +4,117 @@
   </div>
   <div class="wrapper-list-film" id="wrapper-list-film">
     <div class="list-film-browser">
-      <% for( let index = 0; index < 20; index++ ) { %>
-      <div class="film-browser" data-f_id="" data-f_title="">
-        <img
-          src="https://i.pinimg.com/736x/24/05/f5/2405f5d1220d45fef53df0bfe804e104.jpg"
-          alt="film"
+      <% if(title === "Phim đề cử") { filmsByCate.scienceFiction.forEach((film,
+      index) => { %>
+      <div class="film-browser">
+        <label for="filter-detail-film-<%= i %>-<%= index %>">
+          <img src="<%= film.f_poster %>" alt="film" />
+        </label>
+        <input
+          type="checkbox"
+          id="filter-detail-film-<%= i %>-<%= index %>"
+          hidden
         />
+        <div class="wrapper-detail-film-browser">
+          <label
+            for="filter-detail-film-<%= i %>-<%= index %>"
+            class="bg-filter-detail-film"
+          ></label>
+          <div class="detail-film-browser">
+            <div class="wrapper-video">
+              <iframe
+                width="100%"
+                height="520"
+                src="<%= film.f_trailer %>"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="content-film">
+              <div class="content-left">
+                <div class="play-film">
+                  <button>
+                    <i class="fa-solid fa-play"></i><span>Phát</span>
+                  </button>
+                  <div class="add-favorite">
+                    <i
+                      class="fa-solid fa-plus"
+                      onclick="addYourFavorite(this)"
+                      data-id="<%= film.id %>"
+                      ><span>Thêm vào danh sách của tôi</span></i
+                    >
+                    <i class="fa-regular fa-heart"><span>Yêu thích</span></i>
+                  </div>
+                </div>
+                <div class="film-description"><%= film.f_description %></div>
+              </div>
+              <div class="content-right">
+                <span><p>Diễn viên:</p></span>
+                <span><p>Thể loại:</p></span>
+              </div>
+            </div>
+            <div class="similar-content"></div>
+          </div>
+        </div>
       </div>
-      <% } %>
+      <% })} if(title === "Phim hoạt hình") {
+      filmsByCate.cartoons.forEach((film, index) => {%>
+      <div class="film-browser">
+        <label for="filter-detail-film-<%= i %>-<%= index %>">
+          <img src="<%= film.f_poster %>" alt="film" />
+        </label>
+        <input
+          type="checkbox"
+          id="filter-detail-film-<%= i %>-<%= index %>"
+          hidden
+        />
+        <div class="wrapper-detail-film-browser">
+          <label
+            for="filter-detail-film-<%= i %>-<%= index %>"
+            class="bg-filter-detail-film"
+          ></label>
+          <div class="detail-film-browser">
+            <div class="wrapper-video">
+              <iframe
+                width="100%"
+                height="520"
+                src="<%= film.f_trailer %>"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="content-film">
+              <div class="content-left">
+                <div class="play-film">
+                  <button>
+                    <i class="fa-solid fa-play"></i><span>Phát</span>
+                  </button>
+                  <div class="add-favorite">
+                    <i
+                      class="fa-solid fa-plus"
+                      onclick="addYourFavorite(this)"
+                      data-id="<%= film.id %>"
+                      ><span>Thêm vào danh sách của tôi</span></i
+                    >
+                    <i class="fa-regular fa-heart"><span>Yêu thích</span></i>
+                  </div>
+                </div>
+                <div class="film-description"><%= film.f_description %></div>
+              </div>
+              <div class="content-right">
+                <span><p>Diễn viên:</p></span>
+                <span><p>Thể loại:</p></span>
+              </div>
+            </div>
+            <div class="similar-content"></div>
+          </div>
+        </div>
+      </div>
+      <% })}%>
     </div>
   </div>
   <div class="list-slide-film-prev">
@@ -21,3 +124,9 @@
     <i class="fa-solid fa-chevron-right"></i>
   </div>
 </div>
+<script>
+  const addYourFavorite = (i) => {
+    const idFilm = i.getAttribute("data-id");
+    location.href = `/addYourFavorite/${idFilm}`;
+  };
+</script>

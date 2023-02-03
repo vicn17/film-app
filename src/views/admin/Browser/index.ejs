@@ -10,7 +10,7 @@
       href="https://cdn-icons-png.flaticon.com/512/8865/8865527.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../styles/admin/index.css" />
+    <link rel="stylesheet" href="../../styles/admin/index.css" />
   </head>
   <body>
     <!-- Loading -->
@@ -28,6 +28,10 @@
       <!-- Flim  -->
       <%- include("../Film/index.ejs") %>
       <!-- Flim -->
+      <% } else if(page == 'dashboard') { %>
+      <!-- Dashboard -->
+      <%- include("../Dashboard/index.ejs") %>
+      <!-- Dashboard -->
       <% } else if(page == 'add-new-film') { %>
       <!-- Form add new Film -->
       <%- include("../FormAddFilm/index.ejs") %>
@@ -38,6 +42,6 @@
       <!--  -->
       <% } %>
     </div>
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

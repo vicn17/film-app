@@ -13,8 +13,15 @@
   height: 100vh;
   background-color: #1f1f1f;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.fillLogin .title-select-browser {
+  color: white;
+  font-size: 52px;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
 .listUser {
   display: flex;

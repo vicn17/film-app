@@ -2,19 +2,22 @@
   <a href="" class="logo_n flex_jus_center"> Viflix </a>
   <div class="navigation__list">
     <ul>
+      <li class="<%= page == 'dashboard' && "active" %>">
+        <a href="/admin/dashboard"><i class="bi bi-bookmarks"></i> <span>Tổng quan</span></a>
+      </li>
       <li class="<%= (page == 'film' || page == 'detail' || page == 'add-new-film') && "active" %>">
-        <a href="../admin/film"><i class="bi bi-film"></i> <span>Phim</span></a>
+        <a href="/admin/film"><i class="bi bi-film"></i> <span>Phim</span></a>
       </li>
       <li class="<%= page == 'category' && "active" %>">
-        <a href="../admin/category"><i class="bi bi-bookmarks"></i> <span>Thể loại</span></a>
+        <a href="/admin/category"><i class="bi bi-bookmarks"></i> <span>Thể loại</span></a>
       </li>
       <li class="<%= page == 'charts' && "active" %>">
-        <a href="../admin/charts">
+        <a href="/admin/charts">
           <i class="bi bi-house-door-fill"></i> <span>Thống Kê</span>
         </a>
       </li>
       <li class="<%= page == 'comment' && "active" %>">
-        <a href="../admin/comment">
+        <a href="/admin/comment">
           <i class="bi bi-chat-left-dots"></i> <span>Bình luận</span>
         </a>
       </li>

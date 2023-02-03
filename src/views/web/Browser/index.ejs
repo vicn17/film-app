@@ -21,7 +21,7 @@
     <!-- wrapper browser -->
     <div class="container-browser">
       <!-- include header -->
-      <%- include('../Header/index.ejs') -%> <%- include('../Banner/index.ejs')
+      <%- include('../Header/index.ejs') %> <%- include('../Banner/index.ejs')
       %>
 
       <!-- include main -->
@@ -29,13 +29,13 @@
         <!-- list ranking film -->
         <%- include ('../ListRankingFilm/index.ejs') %>
         <!-- list film -->
-        <% category.forEach(cate => { %>
+        <% category.forEach((cate, index) => { %>
         <!--  -->
-        <%- include ('../ListFilm/index.ejs', {title: cate}) %>
+        <%- include ('../ListFilm/index.ejs', {title: cate, i: index,
+        filmsByCate}) %>
         <!--  -->
         <% }) %>
       </main>
-
       <!-- include footer -->
       <%- include('../Footer/index.ejs') %>
     </div>

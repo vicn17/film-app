@@ -1,18 +1,18 @@
 <div class="main__content">
   <div class="main__content_head flex_center">
-    <a href="../admin/film" class="add_content"
+    <a href="/admin/film" class="add_content"
       ><i class="bi bi-arrow-left-circle"></i> <span>Quay Lại</span></a
     >
   </div>
   <div class="main__content_body">
     <div
       class="main__detail_film bg-flm"
-      style="background-image: url('../<%= detailFilm.f_banner %>')"
+      style="background-image: url('/<%= detailFilm.f_banner %>')"
     >
       <div class="main__detail_info flex_center">
         <div class="poster_image">
           <img
-            src="../<%= detailFilm.f_poster %>"
+            src="/<%= detailFilm.f_poster %>"
             alt="<%= detailFilm.f_title %>"
           />
         </div>

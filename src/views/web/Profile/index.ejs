@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/web/profile.css" />
+  </head>
+  <body>
+    <div class="contents__profile">
+      <div class="tab__selects">
+        <a class="back__redir" href="/"
+          ><i class="fa-solid fa-angles-left"></i>
+        </a>
+        <div class="avt__usrs">
+          <input type="file" hidden name="image__usr" id="image__usr" />
+          <img
+            class="img__usr"
+            src="<%= user.ur_avatar %>"
+            alt="<%= user.ur_name %>"
+          />
+          <label for="image__usr"
+            ><img
+              class="icon__cam"
+              src="https://cdn-icons-png.flaticon.com/512/9437/9437190.png"
+              alt=""
+          /></label>
+          <div class="name__usrs"><%= user.ur_name %></div>
+        </div>
+        <ul>
+          <li>
+            <a href="">Profile</a>
+          </li>
+          <li>
+            <a href="">History</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab__shows">
+        <div class="form__info-user">
+          <div class="form-group-user">
+            <label for="">Email</label>
+            <input
+              placeholder="chung nhat vi"
+              type="email"
+              class="form-control-user"
+            />
+          </div>
+          <div class="form-group-user">
+            <label for="">Password</label>
+            <input
+              placeholder="password"
+              type="password"
+              class="form-control-user"
+            />
+          </div>
+        </div>
+        <div class="tab__show-users">
+          <a class="new__usr" href="">
+            <i class="fa-solid fa-plus"></i> &nbsp;new user</a
+          >
+          <div class="list__users">
+            <!--  -->
+            <% user.otherUser.forEach(item => { %>
+            <!--  -->
+            <div class="users_box">
+              <a href="#"
+                ><img src="<%= item.ur_avatar %>" alt="<%= item.ur_name %>"
+              /></a>
+              <p><%= item.ur_name %></p>
+            </div>
+            <!--  -->
+            <% }) %>
+            <!--  -->
+            <!-- <div class="users_box">
+              <a href=""
+                ><img
+                  src="https://i.pinimg.com/564x/b5/a0/d7/b5a0d7fe75d54f4cd2575b273b46c92d.jpg"
+                  alt=""
+              /></a>
+              <p>My amor</p>
+            </div>
+            <div class="users_box">
+              <a href=""
+                ><img
+                  src="https://i.pinimg.com/564x/7c/cf/02/7ccf02c6b65f97e7f4263b1421b30d5c.jpg"
+                  alt=""
+              /></a>
+              <p>Mir siureu</p>
+            </div>
+            <div class="users_box">
+              <a href=""
+                ><img
+                  src="https://i.pinimg.com/564x/b9/e1/4b/b9e14b16ce0ac236a53a2067476a2254.jpg"
+                  alt=""
+              /></a>
+              <p>Axios lumian</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

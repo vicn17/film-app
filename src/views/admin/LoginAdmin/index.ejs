@@ -1,0 +1,47 @@
+<head>
+  <link rel="stylesheet" href="/styles/admin/formAdmin.css" />
+</head>
+
+<div class="wrapperLoginAdmin">
+  <div class="logoLoginAdmin">
+    <!-- <img src="../asset/image/amphora_icons.png" alt="" /> -->
+    <h1>VIFLIX</h1>
+  </div>
+  <div class="form">
+    <form action="../model/HandleLoginAdmin/index.php" method="post">
+      <div class="title">
+        <h1>Đăng nhập Admin</h1>
+      </div>
+      <input
+        type="userName"
+        name="userName"
+        id="userName"
+        placeholder="Tên tài khoản"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Mật khẩu"
+      />
+      <div class="btnSubmit">
+        <button
+          name="submitLogin"
+          type="submit"
+          id="submit"
+          value="submitLogin"
+        >
+          Đăng nhập
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="img">
+    <img
+      src="https://cdn.dribbble.com/userupload/3229037/file/original-b1fe971195aa36011d0a20988177f40a.png?compress=1&resize=1200x1200"
+      alt=""
+    />
+    <div class="checkForm"></div>
+  </div>
+</div>
+<script src="/js/formLoginAdmin.js"></script>
