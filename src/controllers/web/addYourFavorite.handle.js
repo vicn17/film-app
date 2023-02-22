@@ -1,3 +1,5 @@
+import { Accounts, Films } from "../../config/firebase";
+
 //* Add your favorite film
 const addYourFavorite = {
   path: "/addYourFavorite/:id",
@@ -22,6 +24,9 @@ const addYourFavorite = {
       await Accounts.doc(req.session.user.acc_id).update({
         acc_favorite: [...listFilmOld, { f_id: idFilm, ...film.data() }],
       });
+      // await Accounts.doc(req.session.user.acc_id).update({
+      //   acc_users: FieldValue.arrayUnion(),
+      // });
       res.redirect("/favorite");
     }
   },

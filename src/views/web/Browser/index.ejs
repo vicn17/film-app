@@ -36,9 +36,45 @@
         <!--  -->
         <% }) %>
       </main>
+      <div class="wrapper-filter-detail-film">
+        <div class="filter-detail-film"></div>
+        <div class="scroll-detail-film">
+          <div class="block-detail-film">
+            <div class="video-detail-film">
+              <iframe
+                src=""
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <div class="content-detail-film">
+              <div class="list-btn-detail-film">
+                <button><i class="fa-solid fa-play"></i>Phát</button>
+                <a href="#"
+                  ><span>Thêm vào danh sách của bạn</span
+                  ><i class="fa-solid fa-plus"></i
+                ></a>
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+              </div>
+              <h3
+                style="
+                  color: #fff;
+                  margin-bottom: 1rem;
+                  font-weight: 500;
+                  padding-left: 2rem;
+                "
+              >
+                Mô tả:
+              </h3>
+              <div class="description-detail-film"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- include footer -->
       <%- include('../Footer/index.ejs') %>
     </div>
   </body>
   <script src="./js/browser.js"></script>
+  <script src="./js/detailFilm.js"></script>
 </html>

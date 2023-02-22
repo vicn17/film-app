@@ -104,3 +104,8 @@ if (window.screen.width <= 768) {
   );
   slideListFilm(5);
 }
+
+const addYourFavorite = (i) => {
+  const idFilm = i.getAttribute("data-id");
+  location.href = `/addYourFavorite/${idFilm}`;
+};

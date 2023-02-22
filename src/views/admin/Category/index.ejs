@@ -1,0 +1,52 @@
+<div class="main__content">
+  <div class="main__content_head flex_center">
+    <!-- <a href="" class="add_content"
+          ><i class="bi bi-plus-circle"></i> <span>Thêm mới thể loại</span></a
+        > -->
+    <a href="./add-new-category" class="add_content"
+      ><i class="bi bi-plus-circle"></i> <span>Thêm danh mục</span></a
+    >
+    <!-- <a href="" class="add_content"
+          ><i class="bi bi-plus-circle"></i> <span>Thêm mới thể loại</span></a
+        > -->
+  </div>
+  <div class="main__content_body">
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th class="">#</th>
+            <th>Tên danh mục</th>
+            <th>Trạng thái</th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" border="0">
+        <tbody>
+          <% listCate.forEach((item, index) => { %>
+          <tr>
+            <td class=""><%= index + 1 %></td>
+            <td><%= item %></td>
+            <td class="title4">
+              <p>Hoạt động</p>
+            </td>
+            <td>
+              <a class="details-film" href="#"
+                ><i class="bi bi-info-circle"></i
+              ></a>
+              <!-- an/ hien -->
+              <a class="hidden" href="./deleteCate/<%= item %>"
+                ><i class="bi bi-trash"></i>
+                <!-- <i class="bi bi-eye-slash"></i> -->
+              </a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

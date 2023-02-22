@@ -1,6 +1,5 @@
 import express from "express";
 import configViewEngine from "./config/viewEngine";
-import upload from "./config/multer";
 import Router from "./routes";
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");

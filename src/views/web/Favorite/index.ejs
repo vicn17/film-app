@@ -34,61 +34,14 @@
             <div class="list-film-browser">
               <% favoriteList.forEach((film, index) => { %>
               <div class="film-browser">
-                <label for="filter-detail-film-<%= index %>">
-                  <img src="<%= film.f_poster %>" alt="film" />
-                </label>
-                <input
-                  type="checkbox"
-                  id="filter-detail-film-<%= index %>"
-                  hidden
+                <img
+                  src="<%= film.f_poster %>"
+                  alt="film"
+                  onclick="getDetailFilm(this)"
+                  data-id="<%= film.f_id %>"
+                  data-iframe="<%= film.f_trailer %>"
+                  data-desc="<%= film.f_description %>"
                 />
-                <div class="wrapper-detail-film-browser">
-                  <label
-                    for="filter-detail-film-<%= index %>"
-                    class="bg-filter-detail-film"
-                  ></label>
-                  <div class="detail-film-browser">
-                    <div class="wrapper-video">
-                      <iframe
-                        width="100%"
-                        height="520"
-                        src="<%= film.f_trailer %>"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                    <div class="content-film">
-                      <div class="content-left">
-                        <div class="play-film">
-                          <button>
-                            <i class="fa-solid fa-play"></i><span>Phát</span>
-                          </button>
-                          <div class="add-favorite">
-                            <i
-                              class="fa-solid fa-trash"
-                              onclick="removeYourFavorite(this)"
-                              data-id="<%= film.f_id %>"
-                              ><span>Xóa khỏi danh sách của tôi</span></i
-                            >
-                            <i class="fa-regular fa-heart"
-                              ><span>Yêu thích</span></i
-                            >
-                          </div>
-                        </div>
-                        <div class="film-description">
-                          <%= film.f_description %>
-                        </div>
-                      </div>
-                      <div class="content-right">
-                        <span><p>Diễn viên:</p></span>
-                        <span><p>Thể loại:</p></span>
-                      </div>
-                    </div>
-                    <div class="similar-content"></div>
-                  </div>
-                </div>
               </div>
               <% }) %>
             </div>
@@ -101,12 +54,48 @@
           </div>
         </div>
         <script>
-          const removeYourFavorite = (i) => {
-            const idFilm = i.getAttribute("data-id");
-            location.href = `/removeYourFavorite/${idFilm}`;
-          };
+          // const removeYourFavorite = (i) => {
+          //   const idFilm = i.getAttribute("data-id");
+          //   location.href = `/removeYourFavorite/${idFilm}`;
+          // };
         </script>
       </main>
     </div>
+    <div class="wrapper-filter-detail-film">
+      <div class="filter-detail-film"></div>
+      <div class="scroll-detail-film">
+        <div class="block-detail-film">
+          <div class="video-detail-film">
+            <iframe
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </div>
+          <div class="content-detail-film">
+            <div class="list-btn-detail-film">
+              <button><i class="fa-solid fa-play"></i>Phát</button>
+              <a href="#" id="removeFavorite"
+                ><span>Xóa khỏi danh sách của tôi</span
+                ><i class="fa-solid fa-trash"></i
+              ></a>
+              <a href="#"><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 1rem;
+                font-weight: 500;
+                padding-left: 2rem;
+              "
+            >
+              Mô tả:
+            </h3>
+            <div class="description-detail-film"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="./js/detailFilm.js"></script>
 </html>

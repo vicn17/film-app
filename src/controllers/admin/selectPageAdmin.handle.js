@@ -1,4 +1,4 @@
-import { Films } from "../../config/firebase";
+import { Films, Category } from "../../config/firebase";
 
 //* Home page admin
 const selectPage = {
@@ -7,6 +7,7 @@ const selectPage = {
     const page = req.params.page;
     let listFilms = "";
     let detailFilm = "";
+    let listCate = "";
     if (page === "film") {
       const snapshot = await Films.get();
       listFilms = snapshot.docs.map((doc) => ({
@@ -14,8 +15,18 @@ const selectPage = {
         ...doc.data(),
       }));
       return res.render("./admin/Browser", { page, listFilms });
+    } else if (page == "category") {
+      const snapshot = await Category.get();
+      listCate = snapshot.docs.map((doc) => doc.id);
+      return res.render("./admin/Browser", { page, listCate });
     }
-    return res.render("./admin/Browser", { page });
+    const listFilmBrowser = (await Films.get()).docs.map((film) => ({
+      f_id: film.id,
+      f_banner: film.data().f_banner,
+      f_title: film.data().f_title,
+    }));
+    const countsFlim = (await Films.count().get()).data().count;
+    return res.render("./admin/Browser", { page, listFilmBrowser, countsFlim });
   },
   post: [
     {
@@ -82,7 +93,7 @@ const selectPage = {
           ).get();
           const detailFilm = snapshot.docs.map((doc) => doc.id);
 
-          res.redirect(`/detail/${detailFilm}`);
+          res.redirect(`/admin/detail/${detailFilm}`);
         } catch (error) {
           res.send("khong them dc");
         }
